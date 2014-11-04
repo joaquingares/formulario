@@ -3,7 +3,7 @@
         <div class="formulario">
             {{ Form::open(array('url' => 'analiza_solicitud', 'role'=>'form')) }}
                 {{ Form::label('', 'Consulta Disponibilidad', array('class' => 'titulo'))}}
-                <div class="grupo" data-icon = '&#xf073'>
+                <div class="capa-texto" data-icon = '&#xf073'>
                     {{ Form::text('entrada','',array(
                                                 'id' => 'entrada',
                                                 'class' => 'campo',
@@ -14,7 +14,7 @@
                                                 'class' => 'error'
                                                 ))}}
                 </div>
-                <div class="grupo" data-icon = '&#xf073'>
+                <div class="capa-texto" data-icon = '&#xf073'>
                     {{ Form::text('salida','',array(
                                                 'id' => 'salida',
                                                 'class' => 'campo',
@@ -25,9 +25,11 @@
                                                 'class' => 'error'
                                                 ))}}
                 </div>
-                {{ Form::submit('ACEP', array(
+                <div class="capa-boton" data-icon = '&#xf1d9'>
+                {{ Form::submit('ACEPTAR', array(
                                                 'class' => 'boton'
                                                 )) }}
+                </div>
             {{ Form::close() }}
         </div>
     </div>
